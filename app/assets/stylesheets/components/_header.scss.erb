@@ -1,0 +1,27 @@
+.home-hero {
+  background-image: url('<%=asset_path 'red_pattern.png' %>');
+  color: white;
+  padding: 20px 0;
+  @include desktop {
+    padding: 50px;
+  }
+  h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    @include desktop {
+      font-size: 40px;
+    }
+  }
+  p {
+    padding: 0;
+    font-size: 17px;
+    line-height: 29px;
+    @include desktop {
+      padding: 0 130px;
+    }
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}

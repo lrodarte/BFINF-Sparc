@@ -1,0 +1,205 @@
+nav.navbar {
+  background-color: $black;
+  border-color: $black;
+  border-radius: 0px;
+  height: 76px;
+  margin-bottom: 0;
+
+  .brand-img {
+    height: 76px;
+    padding: 8px 15px 0 8px;
+    float: left;
+    text-align: center;
+    border-right: 1px solid $dark-gray;
+    @include mobile {
+      border-right: 0px;
+    }
+    img {
+      max-height: $header-height;
+    }
+  }
+
+  .navbar-header {
+    @include mobile {
+      display: inline-block;
+    } 
+      &#navbar-header-right {
+        @include tablet_and_below {
+          float: right;
+          padding-top: 13px;
+        }
+      }
+
+  }
+
+  .navbar-nav li {
+    border-bottom: 1px solid $light-gray;
+    @include tablet {
+      border-bottom: none;
+    }
+    @include desktop {
+      border-bottom: none;
+    }
+    a {
+      color: white;
+      font-size: 15px;
+      border-right: 1px solid $dark-gray;
+      font-family: $primary_font;
+      @include desktop {
+        padding: 26px 20px;
+      }
+      @include desktop_large {
+        padding: 26px 45px;
+      }
+      &:hover, &.active {
+        color: white;
+        background-color: $dark-gray;
+        transition: all 0.15s ease-in-out;
+      }
+    }
+  }
+
+  .search {
+    display: inline-block;
+  }
+
+  .social-icons {
+    display: inline-block; 
+    margin-bottom: 0px;
+    height: 76px;
+    @include tablet_and_below {
+      width: 100%;
+      text-align: center;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    li {
+      padding: 0 8px;
+      &:last-child {
+        padding: 0 5px;
+      }
+      a {
+        padding-top: 23px;
+        padding-bottom: 24px;
+        color: #999999;
+        font-size: 17px;
+        &:hover {
+          color: $red;
+          transition: all 0.15s ease-in-out;
+        }
+        &.search {
+          padding-left: 25px;
+          padding-right: 5px;
+          text-align: center;
+          border-left: 1px solid $dark-gray;
+          font-size: 20px;
+          @include tablet_and_below {
+            padding: 0 8px; 
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-collapse {
+    background-color: $black;
+    margin-top: -10px;
+  }
+}
+
+.fa-arrow-up {
+  color: white;
+  padding-top: 25px;
+  padding-right: 10px;
+  font-size: 26px;
+  @include mobile {
+    padding-top: 32px;
+  }
+}
+
+#scrolledHeader {
+  .brand-img {
+    svg {
+      width: 75px;
+    }
+  }
+  .navbar-nav {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .navbar-nav .agencyNavbar {
+    display: table;
+    height: 76px;
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      border: none;
+      padding: 0;
+      &:hover, &.active {
+        background-color: transparent;
+      }
+      .agencyNavLogoBG {
+        background-color: $light-gray;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        display: table;
+        margin: 0 auto;
+        .table-cell-logo {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+
+// this is bootstrap override to change the mobile dropdown breakpoint to start on tablet portrait // 
+
+@media (max-width: 991px) {
+    #navbar {
+      float: right;
+      display: inline-block;
+    }
+    .navbar-header {
+        float: none;
+        display: inline-block;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        margin-left: -11px !important;
+        margin-right: -11px !important;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}

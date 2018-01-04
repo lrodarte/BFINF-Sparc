@@ -1,0 +1,40 @@
+@media print {
+	#scrolledHeader {
+		display: none !important;
+	}
+	.home-hero h1 {
+		font-size: 30px;
+	}
+	p {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.agencies_buttons_wrapper, .search-form, .footer {
+		display: none;
+	}
+	h3 {
+		padding-bottom: 20px;
+		font-size: 18px !important;
+	}
+	.currently_title_visible.currently_lookingForward {
+		padding-top: 110px;
+	}
+	.currently_lookingForward, .lookingForward_title {
+		font-size: 16px !important;
+	}
+	.agency-logo {
+		max-width: 200px !important;
+	}
+	.agency-headers {
+		.col-sm-6 {
+			width: 50%;
+			position: relative;
+			float: left;
+		}
+		.col-sm-4 {
+			width: 33%;
+			position: relative;
+			float: left;
+		}
+	}
+}

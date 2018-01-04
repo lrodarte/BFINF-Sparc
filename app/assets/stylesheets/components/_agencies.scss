@@ -1,0 +1,250 @@
+.agency-headers {
+  padding-bottom: 40px;
+}
+
+.agency-principals {
+  border-bottom: 1px solid $light-gray;
+  word-wrap: break-word;
+}
+
+.agencies_buttons_wrapper {
+  position: relative;
+  .agencies {
+    max-height: 350px;
+    overflow-y: scroll;
+    margin: 20px auto;
+    text-align: center;
+    // @include scrollbars(.5em, red);
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #EDEDED;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #D92C35; 
+    }
+    .agency {
+      text-align: center;
+      display: inline-block;
+      background-color: #F2F2F2;
+      margin: 10px 13px;
+      padding: 10px;
+      cursor: pointer;
+      width: 16.6%;
+      height: 205px;
+      -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,.3);
+      -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,.3);
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,.3);
+      @include mobile {
+        height: 195px;
+        width: 41%;
+      }
+      .table-wrapper {
+        display: table;
+        height: 100%;
+        width: 100%;
+        .logo_wrapper {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          width: 100%;
+          img {
+            height: auto; 
+            width: 100%;
+          }
+        }
+      }
+      
+      
+      h4 {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+    .borderAgency{
+      background-color: #353535;
+      color: white;
+      box-shadow: inset 0px 0px 11px 2px rgba(0, 0, 0, 0.68);
+    }
+  }
+  .fade-out {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    background: rgba(255,255,255,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%,#FFFFFF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,#FFFFFF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,#FFFFFF 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,#FFFFFF 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,255,255,0)', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+  }
+}
+
+
+
+.agency_wrapper {
+  h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 30px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .close {
+    position: absolute;
+    right: 20px;
+    background-color: none;
+    border: none;
+  }
+}
+
+.agency-logo-wrapper {
+  height: 200px;
+  width: 100%;
+  display: table;
+  .agency-logo-wrapper-table {
+    display: table-cell;
+    vertical-align: middle;
+    .agency-logo {
+      margin: 0 auto;
+      max-width: 200px;
+    }
+  }
+}
+
+
+
+.quick_links {
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: 30px;
+  padding-top: 0;
+  word-wrap: break-word;
+  @media (min-width: 768px) {
+    padding-top: 110px;
+  }
+  p {
+    padding: 0 10px;
+    text-align: left;
+  }
+}
+
+.documents_cited {
+  word-wrap: break-word;
+  padding-top: 0;
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: 30px;
+  @media (min-width: 768px) {
+    padding-top: 110px;
+  }
+  p {
+    padding: 0 10px;
+    text-align: left;
+  }
+}
+
+.content_creator {
+  padding-bottom: 30px;
+  padding-top: 0;
+  word-wrap: break-word;
+  @media (min-width: 768px) {
+    padding-top: 110px;
+  }
+  p {
+    padding: 0 10px;
+    text-align: left;
+  }
+}
+
+
+.unclickAble{
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: default;
+}
+
+.forwardContent {
+  display:none;
+}
+
+.currently_title, .lookingForward_title, .currentlyTab {
+  text-transform: uppercase;
+  color: $black;
+  padding-left: 2px; padding-right: 2px;
+  font-family: $primary_font;
+  font-weight: bold;
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.currently_lookingForward, .currently_title_invisible {
+  .currentlyTab.active, .lookingForward.active {
+    padding-bottom: 2px;
+    border-bottom: 3px solid $red;
+  }
+}
+
+
+.currentContent, .forwardContent {
+  @media (min-width: 768px) {
+    margin-top: 140px;
+  }
+  p {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 300;
+    text-transform: none;
+  }
+}
+
+.currently_title_invisible{
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.currently_title_visible {
+  position: relative;
+  z-index: 999;
+  //set the width to match the .container at all times //
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 740px;
+    position: absolute;
+  }
+  @media (min-width: 992px) {
+    width: 960px;
+  }
+  @media (min-width: 1200px) {
+    width: 1100px;
+  }
+  &.currently_lookingForward {
+    @media (min-width: 768px) {
+       padding-top: 100px;
+    }
+  }
+}
+
+.popover-content{
+  color: black;
+}
+
+.agencyNavLogo{
+  width:50px;
+}

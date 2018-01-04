@@ -1,0 +1,11 @@
+<h1><%=@agency.title%></h1>
+
+<%=@agency.agency_categories.each do |ac|%>
+	<h1><%=ac.category.title%></h1>
+	<h4>currently</h4>
+	<%=ac.currently%>
+	<br>
+	<h4>looking forward</h4>
+	<%=ac.looking_forward%>
+
+<%end%>

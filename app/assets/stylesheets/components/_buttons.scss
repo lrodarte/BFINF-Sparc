@@ -1,0 +1,15 @@
+.btn.btn-primary {
+  font-family: $primary_font;
+  border-radius: 0px;
+  border: 2px solid white;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 15px 45px;
+  color: #fff;
+  font-weight: 500 !important;
+  font-size: 13px;
+  &:hover {
+    color: #353535;
+    background: #fff;
+  }
+}

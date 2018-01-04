@@ -1,0 +1,48 @@
+@import 'base/fonts';
+@import 'utilities/index';
+html, body {
+  background-image: url('<%=asset_path 'red_pattern.png' %>');
+}
+@media (min-width: 767px) {
+  .home-box.first {
+    padding-right: 40px;
+  }
+  .home-box.second {
+    padding-left: 40px;
+  }
+}
+.homepage-link {
+  background-color: white;
+  color: black;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  padding: 70px 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: $primary_font;
+  transition: .15s ease-in-out;
+  &:hover {
+    background-color: $red;
+    transform: translateY(5px);
+    color: white;
+    text-decoration: none;
+    .requirements {
+      border-color: white;
+      color: white;
+    }
+  }
+  h2 {
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .requirements {
+    transition: .15s ease-in-out;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    font-weight: bolder;
+    color: $red;
+  }
+}

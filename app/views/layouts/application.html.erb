@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application'%>
+  <%= csrf_meta_tags %>
+  <%= metamagic  site: "SPARC: Setting the Default to Open in Research and Education", title: [:title, :site], separator: " | "%>
+  <meta name="description" content="SPARC is a global organization committed to making Open the default mode for all research and education, empowering people to solve big problems and make new discoveries through the adoption of Open Access, Open Data, and Open Education."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Sitewide Facebook Meta -->
+  <meta property="og:site_name" content="SPARC" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<%= image_url 'sparc-logo-gray2.png' %>" />
+
+	<link rel="apple-touch-icon" sizes="57x57" href="<%=asset_path 'apple-icon-57x57.png' %>">
+	<link rel="apple-touch-icon" sizes="60x60" href="<%=asset_path 'apple-icon-60x60.png' %>">
+	<link rel="apple-touch-icon" sizes="72x72" href="<%=asset_path 'apple-icon-72x72.png' %>">
+	<link rel="apple-touch-icon" sizes="76x76" href="<%=asset_path 'apple-icon-76x76.png' %>">
+	<link rel="apple-touch-icon" sizes="114x114" href="<%=asset_path 'apple-icon-114x114.png' %>">
+	<link rel="apple-touch-icon" sizes="120x120" href="<%=asset_path 'apple-icon-120x120.png' %>">
+	<link rel="apple-touch-icon" sizes="144x144" href="<%=asset_path 'apple-icon-144x144.png' %>">
+	<link rel="apple-touch-icon" sizes="152x152" href="<%=asset_path 'apple-icon-152x152.png' %>">
+	<link rel="apple-touch-icon" sizes="180x180" href="<%=asset_path 'apple-icon-180x180.png' %>">
+	<link rel="icon" type="image/png" sizes="192x192"  href="<%=asset_path 'android-icon-192x192.png' %>">
+	<link rel="icon" type="image/png" sizes="32x32" href="<%=asset_path 'favicon-32x32.png' %>">
+	<link rel="icon" type="image/png" sizes="96x96" href="<%=asset_path 'favicon-96x96.png' %>">
+	<link rel="icon" type="image/png" sizes="16x16" href="<%=asset_path 'favicon-16x16.png' %>">
+	<link rel="manifest" href="<%=asset_path 'manifest.json' %>">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="<%=asset_path 'ms-icon-144x144.png' %>">
+	<meta name="theme-color" content="#ffffff">  
+	<%= yield(:head) %>
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', 'UA-62656311-2', 'auto');
+	    ga('send', 'pageview');
+
+	  </script>
+</head>
+<body>
+<%= yield %>
+</body>
+</html>

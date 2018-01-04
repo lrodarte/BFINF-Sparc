@@ -1,0 +1,36 @@
+<h1>form for agency</h1>
+
+<%= semantic_form_for [:admin, resource], builder: ActiveAdmin::FormBuilder do |f| %>
+<fieldset class="inputs">
+	<ol>
+
+		<%=f.input :title%>
+		<%=f.input :tags%>
+		<%=f.input :quick_links%>
+		<%=f.input :documents_cited%>
+		<%=f.input :logo%>
+		<%=image_tag resource.try(:logo), width: "200px"%>
+	</ol>
+	<%@categories.each_with_index do |c,index|%>
+	<hr>
+	<h3><%=c.title%></h3>
+	<ol>
+		<input type="hidden" value="<%=c.agency_categories.where(agency_id: @agency.id).first.try(:id)%>" name="agency[agency_categories_attributes][0][id]" id="agency_agency_categories_attributes_0_id">
+		<li class="hidden input optional" id="agency_agency_categories_attributes_<%=index%>_category_input">
+			<label for="agency_agency_categories_attributes_<%=index%>_category_id" class="label">Category</label>
+			<input name="agency[agency_categories_attributes][<%=index%>][category_id]" id="agency_agency_categories_attributes_<%=index%>_category_id" value="<%=c.id%>">
+		</li>
+		<li class="text input optional" id="agency_agency_categories_attributes_<%=index%>_currently_input">
+			<label for="agency_agency_categories_attributes_<%=index%>_currently" class="label">Currently</label>
+			<textarea rows="20" id="agency_agency_categories_attributes<%=index%>currently" name="agency[agency_categories_attributes][<%=index%>][currently]"> <%=c.agency_categories.where(agency_id: resource.id).first.try(:currently)%></textarea>
+		</li>
+		<li class="text input optional" id="agency_agency_categories_attributes<%=index%>looking_forward_input">
+			<label for="agency_agency_categories_attributes<%=index%>looking_forward" class="label">Looking Forward</label>
+			<textarea rows="20" id="agency_agency_categories_attributes<%=index%>looking_forward" name="agency[agency_categories_attributes][<%=index%>][looking_forward]"><%=c.agency_categories.where(agency_id: resource.id).first.try(:looking_forward)%></textarea>
+		</li>
+	</ol>
+	<%end%>
+</fieldset>
+<%=f.submit%>
+<%end%>
+
